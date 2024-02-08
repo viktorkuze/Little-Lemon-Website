@@ -1,38 +1,377 @@
-.App {
+body {
+  width: 100%;
+  margin: 0 auto;
+}
+
+li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+.logo {
+  max-width: 30%;
+  height: auto;
+}
+
+nav {
+  background-color: beige;
+}
+
+.navbar {
+  padding: 10px 13%;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+}
+
+
+nav ul li {
+  display: inline-block;
+  padding: 2em;
+}
+
+nav ul li a:hover{
+  text-decoration: underline solid #f6cf11;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin:5px 0;
+
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items:center;
+}
+
+.nav-links.visible {
+  flex-direction:column;
+  position:absolute;
+  top: 40px;
+  width:100%;
+  background-color: #495E57;
+  display: flex;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+
+}
+
+/* header section */
+
+.header {
+  display:flex;
+  height:100vh;
+  background-color: black;
+  background-image: url('./images/restaurantTable.jpg');
+  background-size: cover;
+  box-shadow: inset 0 0 0 2000px black(0,0,0,0.3);
+}
+
+.header section {
+  color: #EDEFEE;
+  padding: 10px 13%;
+  position:relative;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.header h1 {
+  color: #f6cf11;
+  font-size: 55px;
+  font-weight: bolder;
+
+}
+
+.header h2 {
+  font-size: 35px;
+
+}
+
+.header p{
+  font-size:22px;
+  margin:15px 0;
+  max-width: 550px;
+  letter-spacing: 2x;
+}
+
+button {
+  background-color: #f6cf11;
+  color:black;
+  padding: 10px 10px;
+  border: none;
+  text-decoration: solid;
+  border-radius: 10px;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/*booking section */
+
+.bookingPage {
+  text-align: center;
+  margin-top: 30px;
+  justify-content: space-between;
+  gap: 2rem 1rem;
+}
+
+form, .comfirm {
+  padding:10px 13%;
+
+}
+
+.formField {
+  padding: 80px 30px;
+}
+
+input, label {
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 15px;
+}
+
+#bookingName, #email, #bookingDate, #bookingTime, #bookingGuests, #bookingLocation, #bookingOccasion{
+  background: rgba(143, 73, 73, 0.453);
+  padding: 7px 20px;
+  border:none;
+  outline:none;
+  border-radius: 10px;
+
+}
+
+.buttonReservation input {
+  padding: 7px 20px;
+  margin-top:20px;
+  background: #f6cf11;
+  color: black;
+  border: none;
+  border-radius: 10px;
+}
+
+.confirmed {
+  background: #f6cf11;
+  letter-spacing: 2x;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+/*Menu Card*/
+
+.menuContainer {
+  max-width:900px;
+  display:flex;
+  justify-content: center;
+  background-color: #e1e2e0;
+  border-radius: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  min-height: 100vh;
+}
+
+.menuContainer .logo {
+  padding-top: 30px;
+}
+
+.menu {
+  text-align: center;
+  color: #f6cf11;
+  margin-top: 20px;
+  margin-bottom:-44px;
+  font-size:35px;
+  font-weight:bolder;
+}
+
+.sectionMenu {
+  padding: 25px;
+}
+
+.sectionMenu > h2, h3 {
+  text-align: center;
+  text-decoration: underline;
+  margin-top: 80px;
+}
+
+.item-name {
+  margin: 30px;
+  font-size: 15px;
+}
+
+.labelMenu {
+  font-weight: bold;
+}
+
+.description {
+  font-style: italic;
+  border-top: 2px solid #495e57;
+}
+
+b{
+  float: right;
+  margin-top: -20px;
+}
+
+/* discount items */
+
+.discount-container {
+  margin: 110px auto;
+  padding: 10px 13%;
+}
+
+.discount-container h2 {
+  color: black;
+}
+
+.discount-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.cards{
+  margin-top: 30px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  gap: 2rem 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.filled-container{
+  background-color: #f6cf11;
+  font-size: 20;
+  padding: 20px;
+  display: flex;
+  margin-top: -30px;
+  border-radius: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.discount-items {
+  width: 250px;
+  background: #a9c8be;
+  border-radius: 5px;
+}
+
+.discount-container img {
+  width:100%;
+  height:170px;
+  border-radius: 5px;
+}
+
+.discount-content {
+  padding: 5px 15px;
+}
+
+.orderbtn {
+  padding: 5px 15px;
+  margin-bottom:20px;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+/* footer */
+
+footer {
+  background-color: beige;
+} 
+
+footer section {
+  padding: 12px 13%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-info img {
+  margin-top: 12px;
+  width: 200px;
+}
+
+footer h3 {
+  font-size: 20px;
+}
+
+footer ul {
+  padding: 0;
+}
+
+footer ul li {
+  padding: 8px 0;
+}
+
+@media screen and (max-width:768px) {
+  .menu-icon {
+    display: block;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .nav-links {
+    display: none;
   }
+
+  .nav-links.visible {
+    display:flex;
+    background: #424242;
+    z-index: 1000;
+    padding: 20px 0;
+  }
+
+  .navbar {
+    background: #fff;
+    padding: 10px 8%;
+  }
+  
+  nav ul li a {
+    color: #fff;
+  }
+
+  .bar{
+    background: rgb(42, 42, 42);
+  }
+
+  .header-text-img{
+    display:none;
+  }
+
+  form, .confirm{
+    padding:10px 8%;
+  }
+
+  .header section, .discount-container {
+    padding: 10px 8%;
+  }
+
+  .discount-header {
+    justify-content: flex-start;
+  }
+
+  .discount-items {
+    width: 100%;
+  }
+
+  footer section {
+    padding: 10px 8%;
+    flex-direction: column;
+  }
+
+  .footer p{
+    width:100%;
+  }
+}
+
+.hidden {
+  display: none;
 }
